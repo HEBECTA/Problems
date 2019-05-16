@@ -3,30 +3,19 @@
 
 #include "pch.h"
 #include <iostream>
+#include "CountCows.h"
+
 
 int landPerimeter(std::string arr[], int size);
 
+namespace TowerHopper {
+
+	void test();
+}
+
 int main()
 {
-	std::string arr[] = {
-		"XOOXO",
-		"XOOXO",
-		"OOOXO",
-		"XXOXO",
-		"OXOOO"
-	};
-
-	std::cout << landPerimeter(arr, 5) << std::endl;
-
-	std::string arr2[] = {
-		"XOOO",
-		"XOXO",
-		"XOXO",
-		"OOXX",
-		"OOOO"
-	};
-
-	std::cout << landPerimeter(arr2, 5) << std::endl;
+	TowerHopper::test();
 
     std::cout << "Hello World!\n"; 
 }

@@ -56,3 +56,28 @@ int landPerimeter(std::string arr[], int size) {
 
 	return (lands * 4) - (collisions * 2);
 }
+
+namespace LandPerimeter {
+	void test() {
+
+		std::string arr[] = {
+			"XOOXO",
+			"XOOXO",
+			"OOOXO",
+			"XXOXO",
+			"OXOOO"
+		};
+
+		std::cout << landPerimeter(arr, 5) << std::endl;
+
+		std::string arr2[] = {
+			"XOOO",
+			"XOXO",
+			"XOXO",
+			"OOXX",
+			"OOOO"
+		};
+
+		std::cout << landPerimeter(arr2, 5) << std::endl;
+	}
+}
