@@ -6,16 +6,19 @@
 #include "CountCows.h"
 
 
-int landPerimeter(std::string arr[], int size);
+//int landPerimeter(std::string arr[], int size);
 
 namespace TowerHopper {
 
 	void test();
 }
 
+
 int main()
 {
-	TowerHopper::test();
+	//TowerHopper::test();
+
+	//CountCows::test();
 
     std::cout << "Hello World!\n"; 
 }

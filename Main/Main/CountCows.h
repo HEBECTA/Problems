@@ -2,26 +2,47 @@
 
 #include <type_traits>
 
+int helper(int n);
+
 template <typename T>
 int countCows(T n) {
 
-	//if ( typeid(int) == typeid(n)  {
+	//std::cout << std::is_same<T, int>::value << std::endl;
 
-		//std::cout << true << std::endl;
-	//}
+	if (std::is_same<T, int>::value)
+	{
+		return helper(n+1);
+	}
 
-	std::cout << std::is_same<T, int>::value << std::endl;
-
-
-	//else
-	return 0;
+	else
+		return 0;
 }
 
-void test() {
+int helper(int n) {
+
+	int kids = 0;
+
+	if (n - 3 <= 0)
+		return 1;
+
+	else {
+
+		for (int i = 1; i <= n - 3; ++i) {
+
+			kids += helper(i);
+		}
+
+		return kids + 1;
+	}
+}
+
+namespace CountCows {
+
+	void test() {
+
+		std::cout << countCows(4) << std::endl;
 
 
-	int a = 5;
-
-
-	countCows(a);
+		//countCows(a);
+	}
 }
